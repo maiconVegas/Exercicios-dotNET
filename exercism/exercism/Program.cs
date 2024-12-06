@@ -1,8 +1,10 @@
 ﻿//-----------------------------------------------------------------------------------------------
 using exercism.annalyns_infiltration;
+using exercism.elons_toys;
 using exercism.hello_world;
 using exercism.lucians_luscious_lasagna;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 //-----------------------------------------------------------------------------------------------
 
 //Console.WriteLine(HelloWorld.Hello());
@@ -29,7 +31,18 @@ using System.ComponentModel.DataAnnotations;
 
 //-----------------------------------------------------------------------------------------------
 
-Console.WriteLine("Teste");
+//RemoteControlCar car = RemoteControlCar.Buy();
+//for (int i = 0; i < 54; i++)
+//{
+//    car.Drive();
+//}
+
+//Console.WriteLine(car.DistanceDisplay());
+//Console.WriteLine(car.BatteryDisplay());
+
+//-----------------------------------------------------------------------------------------------
+
+
 
 
 

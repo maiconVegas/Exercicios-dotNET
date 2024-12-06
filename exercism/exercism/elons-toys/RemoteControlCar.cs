@@ -8,24 +8,21 @@ namespace exercism.elons_toys
 {
     internal class RemoteControlCar
     {
-        public static RemoteControlCar Buy()
-        {
-            throw new NotImplementedException("Please implement the (static) RemoteControlCar.Buy() method");
-        }
+        private int _meters = 0;
+        private int _baterry = 100;
+        public static RemoteControlCar Buy() => new RemoteControlCar();
 
-        public string DistanceDisplay()
-        {
-            throw new NotImplementedException("Please implement the RemoteControlCar.DistanceDisplay() method");
-        }
+        public string DistanceDisplay() => $"Driven {_meters} meters";
 
-        public string BatteryDisplay()
-        {
-            throw new NotImplementedException("Please implement the RemoteControlCar.BatteryDisplay() method");
-        }
+        public string BatteryDisplay() => _baterry == 0 ? "Battery empty" : $"Battery at {_baterry}%";
 
         public void Drive()
         {
-            throw new NotImplementedException("Please implement the RemoteControlCar.Drive() method");
+            if (_baterry > 0)
+            {
+                _meters += 20;
+                _baterry -= 1;
+            }
         }
     }
 }
