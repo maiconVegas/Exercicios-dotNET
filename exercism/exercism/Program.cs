@@ -3,8 +3,10 @@ using exercism.annalyns_infiltration;
 using exercism.elons_toys;
 using exercism.hello_world;
 using exercism.lucians_luscious_lasagna;
+using exercism.squeaky_clean;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Text;
 //-----------------------------------------------------------------------------------------------
 
 //Console.WriteLine(HelloWorld.Hello());
@@ -42,7 +44,34 @@ using System.Globalization;
 
 //-----------------------------------------------------------------------------------------------
 
+//int[] birdsPerDay = new int[] { 2, 5, 0, 7, 4, 1 };
+//Console.WriteLine(birdsPerDay.Take(4).Sum());
+//Console.WriteLine(birdsPerDay.Length - 1);
+//foreach (var item in birdsPerDay)
+//{
+//    Console.WriteLine(item == 0);
+//}
 
+//-----------------------------------------------------------------------------------------------
+
+//var identi = Identifier.Clean("my   Id");
+//Console.WriteLine(identi);
+
+//var identifier = "my  id";
+
+//identifier = identifier.Replace(" ", "_");
+//Console.WriteLine(identifier);
+
+var identifier = "my\0Id";
+var result = new StringBuilder();
+foreach (char c in identifier)
+{
+    if (char.IsControl(c))
+    {
+        
+    }
+}
+Console.WriteLine(identifier);
 
 
 
