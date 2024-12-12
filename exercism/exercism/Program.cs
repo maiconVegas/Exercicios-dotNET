@@ -6,6 +6,7 @@ using exercism.lucians_luscious_lasagna;
 using exercism.squeaky_clean;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Runtime.InteropServices.Marshalling;
 using System.Text;
 //-----------------------------------------------------------------------------------------------
 
@@ -54,24 +55,69 @@ using System.Text;
 
 //-----------------------------------------------------------------------------------------------
 
-//var identi = Identifier.Clean("my   Id");
-//Console.WriteLine(identi);
+////var identi = Identifier.Clean("my   Id");
+////Console.WriteLine(identi);
 
-//var identifier = "my  id";
+////var identifier = "my  id";
 
-//identifier = identifier.Replace(" ", "_");
-//Console.WriteLine(identifier);
+////identifier = identifier.Replace(" ", "_");
+////Console.WriteLine(identifier);
 
-var identifier = "my\0Id";
-var result = new StringBuilder();
-foreach (char c in identifier)
-{
-    if (char.IsControl(c))
-    {
+//var identifier = "my\0Id";
+////int i = 0;
+////foreach (var letter in identifier)
+////{
+////    Console.WriteLine(letter);
+////    Console.WriteLine(i += 1);
+
+//int ind = 0;
+//foreach (var item in identifier)
+//{
+//    if (char.IsControl(item))
+//    {
+//        ind = identifier.IndexOf(item);
+//        identifier = identifier.Replace(item, 'L');
+//    }
+//}
+
+//identifier = identifier.Insert(ind, "CTR");
+////var result = new StringBuilder();
+////foreach (char c in identifier)
+////{
+////    if (char.IsControl(c))
+////    {
         
-    }
-}
-Console.WriteLine(identifier);
+////    }
+////}
+//Console.WriteLine(identifier);
+//Console.WriteLine("/////////////");
+//identifier = "my   Id";
+//Console.WriteLine(Identifier.Clean(identifier));
 
+//identifier = "à-ḃç";
+//Console.WriteLine(identifier);
+//Console.WriteLine(Identifier.Clean(identifier));
+//Console.WriteLine(identifier[2 - 1]);
+
+//Console.WriteLine(Identifier.Clean("àḃç"));
+
+//Console.WriteLine(Convert.ToChar('a' + 2));
+//Console.WriteLine(Identifier.Clean("MyΟβιεγτFinder"));
+////var teste = "MyΟβιεγτFinder";
+
+////var teste2 = Convert.ToInt32('α');
+////var teste3 = Convert.ToInt32('ω');
+////Console.WriteLine(teste2);
+////Console.WriteLine(teste3);
+//Console.WriteLine('ε' < 'α' || 'ε' > 'ω');
+////foreach (var letra in teste)
+////{
+////    if (letra < 'α' || letra > 'ω')
+////    {
+////        Console.WriteLine(letra);
+////    }
+////}
+
+//-----------------------------------------------------------------------------------------------
 
 
