@@ -1,5 +1,6 @@
 ﻿//-----------------------------------------------------------------------------------------------
 using exercism.annalyns_infiltration;
+using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
 using exercism.hello_world;
 using exercism.lucians_luscious_lasagna;
@@ -122,5 +123,22 @@ using System.Text;
 
 //var data = DateTime.Now;
 //Console.WriteLine(data.ToString(new CultureInfo("pt-BR")));
-var date = DateTime.ParseExact("7/25/2019 13:45:00", "M/d/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-Console.WriteLine(date);
+//var date = DateTime.ParseExact("7/25/2019 13:45:00", "M/d/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+//Console.WriteLine(date);
+
+//var date1 = DateTime.Parse("July 25, 2019 13:45:00");
+//Console.WriteLine(date1);
+//var date2 = DateTime.Parse("Thursday, July 25, 2019 13:45:00");
+//Console.WriteLine(date2);
+
+//Console.WriteLine(Appointment.HasPassed(new DateTime(1999, 12, 31, 9, 0, 0)));
+
+//Console.WriteLine(Appointment.IsAfternoonAppointment(new DateTime(2019, 03, 29, 17, 0, 0)));
+
+Console.WriteLine(Appointment.Description(new DateTime(2019, 03, 29, 15, 0, 0)));
+
+Console.WriteLine(Appointment.AnniversaryDate().ToString());
+
+//-----------------------------------------------------------------------------------------------
+
+
