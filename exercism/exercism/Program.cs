@@ -86,7 +86,7 @@ using System.Text;
 ////{
 ////    if (char.IsControl(c))
 ////    {
-        
+
 ////    }
 ////}
 //Console.WriteLine(identifier);
@@ -120,4 +120,7 @@ using System.Text;
 
 //-----------------------------------------------------------------------------------------------
 
-
+//var data = DateTime.Now;
+//Console.WriteLine(data.ToString(new CultureInfo("pt-BR")));
+var date = DateTime.ParseExact("7/25/2019 13:45:00", "M/d/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+Console.WriteLine(date);
