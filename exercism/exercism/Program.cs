@@ -6,6 +6,7 @@ using exercism.hello_world;
 using exercism.interest_is_interesting;
 using exercism.lucians_luscious_lasagna;
 using exercism.squeaky_clean;
+using exercism.wizards_and_warriors;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Runtime.InteropServices.Marshalling;
@@ -152,3 +153,6 @@ using System.Text;
 
 //-----------------------------------------------------------------------------------------------
 
+//var teste = new Warrior();
+
+//-----------------------------------------------------------------------------------------------
