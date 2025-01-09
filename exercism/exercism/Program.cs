@@ -156,3 +156,35 @@ using System.Text;
 //var teste = new Warrior();
 
 //-----------------------------------------------------------------------------------------------
+
+//////////////////////// SOMENTE TESTANDO MESMO, NAO ESTA ENVOLVIDO COM O EXERCICIO NAO
+//int[] numbers = [0, 1, 2, 3, 4, 5, 6];
+//var numQuery = from num  in numbers where (num%2)==0 select num;
+
+//foreach (var item in numQuery)
+//{
+//    Console.WriteLine(item);
+//}
+
+
+
+int teste1 = 5;
+int teste2 = 6;
+int teste3 = 7;
+
+
+var retorno = teste2 switch
+{
+    < 2 => "menor que dois",
+    < 6 => "menor que seis",
+    _ => "menor que nada"
+};
+
+Console.WriteLine(retorno);
+Console.WriteLine(uint.MaxValue);
+var teste = BitConverter.GetBytes(5).Prepend((byte)(256 - 8));
+Console.WriteLine(teste.ToString());
+Console.WriteLine("///////////");
+var amem = BitConverter.GetBytes(long.MinValue).Prepend((byte)(256 - 8));
+var testee = amem.Concat(new byte[9 - amem.Count()]).ToArray();
+Console.WriteLine(testee[0]);
