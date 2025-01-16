@@ -6,6 +6,7 @@ using exercism.hello_world;
 using exercism.interest_is_interesting;
 using exercism.lucians_luscious_lasagna;
 using exercism.squeaky_clean;
+using exercism.tracks_on_tracks_on_tracks;
 using exercism.wizards_and_warriors;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
@@ -168,23 +169,30 @@ using System.Text;
 
 
 
-int teste1 = 5;
-int teste2 = 6;
-int teste3 = 7;
+//int teste1 = 5;
+//int teste2 = 6;
+//int teste3 = 7;
 
 
-var retorno = teste2 switch
-{
-    < 2 => "menor que dois",
-    < 6 => "menor que seis",
-    _ => "menor que nada"
-};
+//var retorno = teste2 switch
+//{
+//    < 2 => "menor que dois",
+//    < 6 => "menor que seis",
+//    _ => "menor que nada"
+//};
 
-Console.WriteLine(retorno);
-Console.WriteLine(uint.MaxValue);
-var teste = BitConverter.GetBytes(5).Prepend((byte)(256 - 8));
-Console.WriteLine(teste.ToString());
-Console.WriteLine("///////////");
-var amem = BitConverter.GetBytes(long.MinValue).Prepend((byte)(256 - 8));
-var testee = amem.Concat(new byte[9 - amem.Count()]).ToArray();
-Console.WriteLine(testee[0]);
+//Console.WriteLine(retorno);
+//Console.WriteLine(uint.MaxValue);
+//var teste = BitConverter.GetBytes(5).Prepend((byte)(256 - 8));
+//Console.WriteLine(teste.ToString());
+//Console.WriteLine("///////////");
+//var amem = BitConverter.GetBytes(long.MinValue).Prepend((byte)(256 - 8));
+//var testee = amem.Concat(new byte[9 - amem.Count()]).ToArray();
+//Console.WriteLine(testee[0]);
+
+//-----------------------------------------------------------------------------------------------
+Console.WriteLine("Teste");
+Languages.RemoveLanguage(Languages.GetExistingLanguages(), "Clojure");
+
+
+
