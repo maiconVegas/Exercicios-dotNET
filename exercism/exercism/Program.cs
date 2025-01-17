@@ -4,6 +4,7 @@ using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
 using exercism.hello_world;
 using exercism.interest_is_interesting;
+using exercism.international_calling_connoisseur;
 using exercism.lucians_luscious_lasagna;
 using exercism.squeaky_clean;
 using exercism.tracks_on_tracks_on_tracks;
@@ -191,8 +192,26 @@ using System.Text;
 //Console.WriteLine(testee[0]);
 
 //-----------------------------------------------------------------------------------------------
-Console.WriteLine("Teste");
-Languages.RemoveLanguage(Languages.GetExistingLanguages(), "Clojure");
+//Console.WriteLine("Teste");
+//Languages.RemoveLanguage(Languages.GetExistingLanguages(), "Clojure");
+
+//-----------------------------------------------------------------------------------------------
+
+//Console.WriteLine(DialingCodes.GetExistingDictionary()[1]);
+
+//var dicionario = new Dictionary<int, string>() {
+//    [1] = "Banana",
+//    [2] = "Maça",
+//    [3] = "Maracuja",
+//    [4] = "Laranja"
+//};
+
+//Console.WriteLine(dicionario.Values.OrderByDescending(n => n.Length).FirstOrDefault());
+
+//-----------------------------------------------------------------------------------------------
+
+
+
 
 
 
