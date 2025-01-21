@@ -210,6 +210,11 @@ using System.Text;
 
 //-----------------------------------------------------------------------------------------------
 
+//string teste = "amem";
+//Console.WriteLine(teste);
+//teste = null;
+//string? teste2 = null;
+//Console.WriteLine(teste);
 
 
 
