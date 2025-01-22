@@ -217,6 +217,9 @@ using System.Text;
 //Console.WriteLine(teste);
 
 
+string testador = "outro";
+testador = "aaaaa";
+Console.WriteLine(testador ?? "bbbb");
 
 
 
