@@ -2,6 +2,7 @@
 using exercism.annalyns_infiltration;
 using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
+using exercism.EXERCICIOSStrings.bob;
 using exercism.EXERCICIOSStrings.rotational_cipher;
 using exercism.hello_world;
 using exercism.interest_is_interesting;
@@ -13,6 +14,7 @@ using exercism.wizards_and_warriors;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Runtime.InteropServices.Marshalling;
+using System.Security.Cryptography;
 using System.Text;
 //-----------------------------------------------------------------------------------------------
 
@@ -236,5 +238,8 @@ using System.Text;
 Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
 
 //-----------------------------------------------------------------------------------------------
-
+string ass = "como";
+string pergunta = "Does this cryogenic chamber make me look fat?";
+Console.WriteLine(pergunta[pergunta.Length - 1]);
+Console.WriteLine(Bob.Response("Does this cryogenic chamber make me look fat?"));
 
