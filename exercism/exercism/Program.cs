@@ -225,13 +225,16 @@ using System.Text;
 
 //-----------------------------------------------------------------------------------------------
 
-Console.WriteLine("");
-char a = 'A';
-char b = 'B';
-char sdd = Convert.ToChar(Convert.ToInt32(a) + Convert.ToInt32(b));
-string qualqeur = "aaaaa";
-string aa = (char)(qualqeur[0]+1) + "";
-Console.WriteLine(aa);
+//Console.WriteLine("");
+//char a = 'A';
+//char b = 'B';
+//char sdd = Convert.ToChar(Convert.ToInt32(a) + Convert.ToInt32(b));
+//string qualqeur = "aaaaa";
+//string aa = (char)(qualqeur[0]+1) + "";
+//Console.WriteLine(aa);
 
 Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
+
+//-----------------------------------------------------------------------------------------------
+
 
