@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercism.tarefasDeStrings
+namespace exercism.EXERCICIOSStrings.tarefasDeStrings
 {
     public class LogLine
     {

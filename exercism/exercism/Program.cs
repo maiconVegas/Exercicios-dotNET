@@ -2,6 +2,7 @@
 using exercism.annalyns_infiltration;
 using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
+using exercism.EXERCICIOSStrings.rotational_cipher;
 using exercism.hello_world;
 using exercism.interest_is_interesting;
 using exercism.international_calling_connoisseur;
@@ -222,5 +223,15 @@ using System.Text;
 //testador = "aaaaa";
 //Console.WriteLine(testador ?? "bbbb");
 
+//-----------------------------------------------------------------------------------------------
 
+Console.WriteLine("");
+char a = 'A';
+char b = 'B';
+char sdd = Convert.ToChar(Convert.ToInt32(a) + Convert.ToInt32(b));
+string qualqeur = "aaaaa";
+string aa = (char)(qualqeur[0]+1) + "";
+Console.WriteLine(aa);
+
+Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
 
