@@ -216,10 +216,11 @@ using System.Text;
 //string? teste2 = null;
 //Console.WriteLine(teste);
 
+//-----------------------------------------------------------------------------------------------
 
-string testador = "outro";
-testador = "aaaaa";
-Console.WriteLine(testador ?? "bbbb");
+//string testador = "outro";
+//testador = "aaaaa";
+//Console.WriteLine(testador ?? "bbbb");
 
 
 
