@@ -3,6 +3,7 @@ using exercism.annalyns_infiltration;
 using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
 using exercism.EXERCICIOSStrings.bob;
+using exercism.EXERCICIOSStrings.pangram;
 using exercism.EXERCICIOSStrings.rotational_cipher;
 using exercism.hello_world;
 using exercism.interest_is_interesting;
@@ -238,10 +239,36 @@ using System.Text;
 Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
 
 //-----------------------------------------------------------------------------------------------
-string ass = "como";
-string pergunta = "Does this cryogenic chamber make me look fat?";
-Console.WriteLine(pergunta[pergunta.Length - 1]);
-Console.WriteLine(Bob.Response("Does this cryogenic chamber make me look fat?"));
+//string ass = "como";
+//string pergunta = "Does this cryogenic chamber make me look fat?";
+//Console.WriteLine(pergunta[pergunta.Length - 1]);
+//Console.WriteLine(Bob.Response("Does this cryogenic chamber make me look fat?"));
 
-Console.WriteLine(Bob.Response("1, 2, 3"));
+//Console.WriteLine(Bob.Response("1, 2, 3"));
+
+//-----------------------------------------------------------------------------------------------
+//char qualquer = 'T';
+
+//Console.WriteLine((char)(qualquer + 2));
+
+char[] caracteres = { 'D', 'B', 'c', 'A', 'd', 't'};
+Array.Sort(caracteres);
+string aaaaa = new string(caracteres.Distinct().ToArray());
+Console.WriteLine(aaaaa.ToLower());
+
+char inicio = 'A';
+int inic = inicio;
+Console.WriteLine((char)(inic + 25));
+
+string aaa = "abcdomopss";
+string resultado = new string(aaa.OrderBy(c => c).Distinct().ToArray());
+Console.WriteLine(resultado);
+
+Console.WriteLine((char)('A'+1));
+
+string frase1 = "The quick brown fox jumps over the lazy dog";
+string frase2 = "Hello World";
+
+Console.WriteLine(Pangram.IsPangram(frase1));
+Console.WriteLine(Pangram.IsPangram(frase2));
 
