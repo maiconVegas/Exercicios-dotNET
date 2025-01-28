@@ -3,6 +3,7 @@ using exercism.annalyns_infiltration;
 using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
 using exercism.EXERCICIOSStrings.bob;
+using exercism.EXERCICIOSStrings.isogram;
 using exercism.EXERCICIOSStrings.pangram;
 using exercism.EXERCICIOSStrings.rotational_cipher;
 using exercism.hello_world;
@@ -269,6 +270,12 @@ Console.WriteLine((char)('A'+1));
 string frase1 = "The quick brown fox jumps over the lazy dog";
 string frase2 = "Hello World";
 
-Console.WriteLine(Pangram.IsPangram(frase1));
-Console.WriteLine(Pangram.IsPangram(frase2));
+//Console.WriteLine(Pangram.IsPangram(frase1));
+//Console.WriteLine(Pangram.IsPangram(frase2));
 
+Console.WriteLine(Isogram.IsIsogram("Alphabet"));
+
+//string palavra = "six-year-old";
+//Console.WriteLine(palavra.Where(char.IsLetter).Count());
+//Console.WriteLine(palavra.Count());
+//Console.WriteLine('a'.Equals('A'));
