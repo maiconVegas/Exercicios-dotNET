@@ -10,37 +10,18 @@ public static class Bob
     public static string Response(string statement) =>
         StatementIsUpperWithQuestion(statement) ? "Calm down, I know what I'm doing!" :
         StatementIsUpper(statement) ? "Whoa, chill out!" :
-        QuestionEnd(statement) ? "Sure." : "Amem";
+        QuestionEnd(statement) ? "Sure." :
+        Silence(statement)? "Fine. Be that way!" : "Whatever.";
 
-    private static bool StatementIsUpper(string statement)
-    {
-        foreach (char c in statement)
-        {
-            if (char.IsLetter(c))
-            {
-                if (!char.IsUpper(c))
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+    private static bool StatementIsUpper(string statement) =>
+        statement.Where(char.IsLetter).All(char.IsUpper) && ContainsWord(statement);
 
-    private static bool StatementIsUpperWithQuestion(string statement)
-    {
-        foreach (char c in statement)
-        {
-            if (char.IsLetter(c))
-            {
-                if (!char.IsUpper(c))
-                {
-                    return false;
-                }
-            }
-        }
-        return QuestionEnd(statement);
-    }
+    private static bool StatementIsUpperWithQuestion(string statement) =>
+        ContainsWord(statement) && QuestionEnd(statement) && StatementIsUpper(statement);
 
-    private static bool QuestionEnd(string statement) => statement[statement.Length - 1] == '?';
+    private static bool QuestionEnd(string statement) => statement.Trim().EndsWith('?');
+
+    private static bool ContainsWord(string statement) => statement.Any(char.IsLetter);
+
+    private static bool Silence(string statement) => string.IsNullOrWhiteSpace(statement);
 }

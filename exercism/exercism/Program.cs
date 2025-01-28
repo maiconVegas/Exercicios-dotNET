@@ -243,3 +243,5 @@ string pergunta = "Does this cryogenic chamber make me look fat?";
 Console.WriteLine(pergunta[pergunta.Length - 1]);
 Console.WriteLine(Bob.Response("Does this cryogenic chamber make me look fat?"));
 
+Console.WriteLine(Bob.Response("1, 2, 3"));
+
