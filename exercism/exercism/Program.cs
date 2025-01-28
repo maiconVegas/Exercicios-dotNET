@@ -2,6 +2,7 @@
 using exercism.annalyns_infiltration;
 using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
+using exercism.EXERCICIOSStrings.acronym;
 using exercism.EXERCICIOSStrings.bob;
 using exercism.EXERCICIOSStrings.isogram;
 using exercism.EXERCICIOSStrings.pangram;
@@ -279,3 +280,19 @@ Console.WriteLine(Isogram.IsIsogram("Alphabet"));
 //Console.WriteLine(palavra.Where(char.IsLetter).Count());
 //Console.WriteLine(palavra.Count());
 //Console.WriteLine('a'.Equals('A'));
+
+//-----------------------------------------------------------------------------------------------
+
+string frase3 = "amem deus it's ceu";
+Console.WriteLine(frase3.Split()[2].ToString()[0]);
+
+string gasdasd = "AB";
+gasdasd += "C";
+Console.WriteLine(gasdasd);
+
+//-----------------------------------------------------------------------------------------------
+
+string teste = "Halley's Comet";
+string teste2 = new string(teste.Where(char.IsPunctuation).ToArray());
+Console.WriteLine(teste.Replace(teste2, " "));
+//Console.WriteLine(Acronym.Abbreviate("The Road _Not_ Taken"));
