@@ -10,14 +10,21 @@ namespace exercism.EXERCICIOSStrings.acronym
     {
         public static string Abbreviate(string phrase)
         {
+            var resultado = phrase.Split(new char[] {' ', '-', '_'}, StringSplitOptions.RemoveEmptyEntries);
             string Abreviated = string.Empty;
-            var pontuacoes = new string(phrase.Where(char.IsPunctuation).ToArray());
-            var resultado = phrase.Replace(pontuacoes, " ").Split();
-            for (int i = 0; i < resultado.Length; i++)
+            foreach (var word in resultado)
             {
-                Abreviated += resultado[i].ToString()[0];
+                Abreviated += word[0];
             }
             return Abreviated.ToUpper();
         }
+
+        /*
+         foi usado esse tipo de parametro do Split()
+        public string[] Split(char[]? separator, StringSplitOptions options)
+        {
+            return SplitInternal(separator, int.MaxValue, options);
+        }
+         */
     }
 }

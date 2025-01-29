@@ -19,6 +19,7 @@ using System.Globalization;
 using System.Runtime.InteropServices.Marshalling;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 //-----------------------------------------------------------------------------------------------
 
 //Console.WriteLine(HelloWorld.Hello());
@@ -292,7 +293,33 @@ Console.WriteLine(gasdasd);
 
 //-----------------------------------------------------------------------------------------------
 
-string teste = "Halley's Comet";
+string teste = "Halley's - Comet";
 string teste2 = new string(teste.Where(char.IsPunctuation).ToArray());
+Console.WriteLine(teste2);
 Console.WriteLine(teste.Replace(teste2, " "));
-//Console.WriteLine(Acronym.Abbreviate("The Road _Not_ Taken"));
+Console.WriteLine(Acronym.Abbreviate("The-Roa'd _Not_ Taken"));
+
+
+//var qualquerrr = "The Road _Not_-Taken";
+//var poooo = qualquerrr.Replace("_", " ").Replace("-", " ");
+//Console.WriteLine(poooo);
+//var oooooo = poooo.Split();
+//Console.WriteLine(poooo);
+//foreach (var item in oooooo)
+//{
+//    Console.WriteLine(item);
+//}
+
+//string texto = "The Road _Not_-Taken's -   Super";
+
+//// Removendo pontuações e caracteres indesejados, mantendo apenas letras e espaços
+//string textoLimpo = Regex.Replace(texto, @"[^\p{L}]", " ");
+
+//// Separando as palavras em um array
+//string[] palavras = textoLimpo.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+//// Exibindo as palavras
+//foreach (string palavra in palavras)
+//{
+//    Console.WriteLine(palavra);
+//}
