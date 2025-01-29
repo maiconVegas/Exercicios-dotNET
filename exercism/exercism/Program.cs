@@ -7,6 +7,7 @@ using exercism.EXERCICIOSStrings.bob;
 using exercism.EXERCICIOSStrings.isogram;
 using exercism.EXERCICIOSStrings.pangram;
 using exercism.EXERCICIOSStrings.rotational_cipher;
+using exercism.EXERCICIOSStrings.run_length_encoding;
 using exercism.hello_world;
 using exercism.interest_is_interesting;
 using exercism.international_calling_connoisseur;
@@ -20,6 +21,7 @@ using System.Runtime.InteropServices.Marshalling;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.XPath;
 //-----------------------------------------------------------------------------------------------
 
 //Console.WriteLine(HelloWorld.Hello());
@@ -326,12 +328,11 @@ using System.Text.RegularExpressions;
 
 
 //-----------------------------------------------------------------------------------------------
+//Console.WriteLine(".....Teste.....");
 
-Console.WriteLine(".....Teste.....");
-
-string[] palavras = { "Alo", "Ola", "Amor","LoA", "mora", "lOa" };
-string[] analisador = palavras.Select(x => x.ToLower()).ToArray();
-string encontre = "loa";
+//string[] palavras = { "Alo", "Ola", "Amor","LoA", "mora", "lOa" };
+//string[] analisador = palavras.Select(x => x.ToLower()).ToArray();
+//string encontre = "loa";
 //string[] encontrado = analisador.Where(x => x != encontre).ToArray();
 //string[] resultados = palavras
 //    .Where(w => w.ToLower() != encontre.ToLower())
@@ -343,21 +344,59 @@ string encontre = "loa";
 //    Console.WriteLine(item);
 
 //}
-foreach (var provavel in palavras)
+//foreach (var provavel in palavras)
+//{
+//    if (!provavel.ToLower().Equals(encontre))
+//    {
+//        //Console.WriteLine(provavel);
+//        if (IsAnagram(provavel, encontre))
+//        {
+//            Console.WriteLine(provavel);
+//        }
+//    }
+//}
+
+//bool IsAnagram(string provavel, string match)
+//{
+//    provavel = string.Concat(provavel.ToLower().OrderBy(x=>x));
+//    match = string.Concat(match.ToLower().OrderBy(x => x));
+//    return provavel == match;
+//}
+
+//-----------------------------------------------------------------------------------------------
+Console.WriteLine(".....Teste.....");
+string teste = "aaaaaaaaccccccSSds3wsRSr";
+//teste += "A";
+//teste += "B";
+//teste += "B";
+//teste += "B";
+//teste += "C";
+
+Console.WriteLine(teste[^1]);
+string gggg = "";
+//gggg += $"{3* 'A'}";
+for (int i = 0; i < 3; i++)
 {
-    if (!provavel.ToLower().Equals(encontre))
-    {
-        //Console.WriteLine(provavel);
-        if (IsAnagram(provavel, encontre))
-        {
-            Console.WriteLine(provavel);
-        }
-    }
+    gggg += $"{'a'}";
 }
 
-bool IsAnagram(string provavel, string match)
-{
-    provavel = string.Concat(provavel.ToLower().OrderBy(x=>x));
-    match = string.Concat(match.ToLower().OrderBy(x => x));
-    return provavel == match;
-}
+Console.WriteLine(gggg);
+//string resultado = string.Empty;
+//int count = 0;
+//char equaled = teste[0];
+//for (int i = 0; i < teste.Length; i++)
+//{
+//    if (equaled.Equals(teste[i]))
+//    {
+//        count++;
+//    }
+//    else
+//    {
+//        resultado += $"{(count > 1? count : "")}{equaled}";
+//        equaled = teste[i];
+//        count = 1;
+//    }
+//}
+//resultado += $"{(count > 1 ? count : "")}{equaled}";
+//Console.WriteLine(resultado);
+Console.WriteLine(RunLengthEncoding.Encode("ABC"));
