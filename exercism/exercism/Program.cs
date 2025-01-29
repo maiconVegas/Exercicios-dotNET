@@ -239,7 +239,7 @@ using System.Text.RegularExpressions;
 //string aa = (char)(qualqeur[0]+1) + "";
 //Console.WriteLine(aa);
 
-Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
+//Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
 
 //-----------------------------------------------------------------------------------------------
 //string ass = "como";
@@ -254,28 +254,28 @@ Console.WriteLine(RotationalCipher.Rotate("Abc. aaa", 3));
 
 //Console.WriteLine((char)(qualquer + 2));
 
-char[] caracteres = { 'D', 'B', 'c', 'A', 'd', 't'};
-Array.Sort(caracteres);
-string aaaaa = new string(caracteres.Distinct().ToArray());
-Console.WriteLine(aaaaa.ToLower());
+//char[] caracteres = { 'D', 'B', 'c', 'A', 'd', 't'};
+//Array.Sort(caracteres);
+//string aaaaa = new string(caracteres.Distinct().ToArray());
+//Console.WriteLine(aaaaa.ToLower());
 
-char inicio = 'A';
-int inic = inicio;
-Console.WriteLine((char)(inic + 25));
+//char inicio = 'A';
+//int inic = inicio;
+//Console.WriteLine((char)(inic + 25));
 
-string aaa = "abcdomopss";
-string resultado = new string(aaa.OrderBy(c => c).Distinct().ToArray());
-Console.WriteLine(resultado);
+//string aaa = "abcdomopss";
+//string resultado = new string(aaa.OrderBy(c => c).Distinct().ToArray());
+//Console.WriteLine(resultado);
 
-Console.WriteLine((char)('A'+1));
+//Console.WriteLine((char)('A'+1));
 
-string frase1 = "The quick brown fox jumps over the lazy dog";
-string frase2 = "Hello World";
+//string frase1 = "The quick brown fox jumps over the lazy dog";
+//string frase2 = "Hello World";
 
 //Console.WriteLine(Pangram.IsPangram(frase1));
 //Console.WriteLine(Pangram.IsPangram(frase2));
 
-Console.WriteLine(Isogram.IsIsogram("Alphabet"));
+//Console.WriteLine(Isogram.IsIsogram("Alphabet"));
 
 //string palavra = "six-year-old";
 //Console.WriteLine(palavra.Where(char.IsLetter).Count());
@@ -284,20 +284,20 @@ Console.WriteLine(Isogram.IsIsogram("Alphabet"));
 
 //-----------------------------------------------------------------------------------------------
 
-string frase3 = "amem deus it's ceu";
-Console.WriteLine(frase3.Split()[2].ToString()[0]);
+//string frase3 = "amem deus it's ceu";
+//Console.WriteLine(frase3.Split()[2].ToString()[0]);
 
-string gasdasd = "AB";
-gasdasd += "C";
-Console.WriteLine(gasdasd);
+//string gasdasd = "AB";
+//gasdasd += "C";
+//Console.WriteLine(gasdasd);
 
 //-----------------------------------------------------------------------------------------------
 
-string teste = "Halley's - Comet";
-string teste2 = new string(teste.Where(char.IsPunctuation).ToArray());
-Console.WriteLine(teste2);
-Console.WriteLine(teste.Replace(teste2, " "));
-Console.WriteLine(Acronym.Abbreviate("The-Roa'd _Not_ Taken"));
+//string teste = "Halley's - Comet";
+//string teste2 = new string(teste.Where(char.IsPunctuation).ToArray());
+//Console.WriteLine(teste2);
+//Console.WriteLine(teste.Replace(teste2, " "));
+//Console.WriteLine(Acronym.Abbreviate("The-Roa'd _Not_ Taken"));
 
 
 //var qualquerrr = "The Road _Not_-Taken";
@@ -323,3 +323,41 @@ Console.WriteLine(Acronym.Abbreviate("The-Roa'd _Not_ Taken"));
 //{
 //    Console.WriteLine(palavra);
 //}
+
+
+//-----------------------------------------------------------------------------------------------
+
+Console.WriteLine(".....Teste.....");
+
+string[] palavras = { "Alo", "Ola", "Amor","LoA", "mora", "lOa" };
+string[] analisador = palavras.Select(x => x.ToLower()).ToArray();
+string encontre = "loa";
+//string[] encontrado = analisador.Where(x => x != encontre).ToArray();
+//string[] resultados = palavras
+//    .Where(w => w.ToLower() != encontre.ToLower())
+//    .Where(x => x.ToLower().OrderBy(l=>l) == encontre.ToLower().OrderBy(l=>l))
+//    .ToArray();
+
+//foreach (var item in resultados)
+//{
+//    Console.WriteLine(item);
+
+//}
+foreach (var provavel in palavras)
+{
+    if (!provavel.ToLower().Equals(encontre))
+    {
+        //Console.WriteLine(provavel);
+        if (IsAnagram(provavel, encontre))
+        {
+            Console.WriteLine(provavel);
+        }
+    }
+}
+
+bool IsAnagram(string provavel, string match)
+{
+    provavel = string.Concat(provavel.ToLower().OrderBy(x=>x));
+    match = string.Concat(match.ToLower().OrderBy(x => x));
+    return provavel == match;
+}
