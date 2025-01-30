@@ -405,8 +405,10 @@ using System.Xml.XPath;
 //----------------------------------ATE AGORA E MUITO SIMPLES ISSO MAS AO MESMO TEPO COMPLICADO-------------------------------------------------------------
 Console.WriteLine(".....Teste.....");
 
-Console.WriteLine(new String('A', 17));
+//Console.WriteLine(new String('A', 17));
 
 string teste = "F4b11R";
-string resultado = Regex.Replace(teste, @"(\d+)(\D)", m => new String(m.Groups[2].Value[0], Convert.ToInt32(m.Groups[1].Value)));
-Console.WriteLine(resultado);
+//string resultado2 = Regex.Replace(teste, @"(\D)", new string);
+//string resultado = Regex.Replace(teste, @"(\d+)(\D)", m => new String(m.Groups[2].Value[0], Convert.ToInt32(m.Groups[1].Value)));
+//Console.WriteLine(resultado);
+Console.WriteLine(String.Concat(teste.Reverse()));
