@@ -434,9 +434,21 @@ using System.Xml.XPath;
 //}
 
 //-----------------------------------------------------------------------------------------------
+//Console.WriteLine(".....Teste.....");
+//var lista = new List<string> { "hello", "world" }.Accumulate(x => x.ToUpper());
+//foreach (var item in lista)
+//{
+//    Console.WriteLine(item);
+//}
+
+//-----------------------------------------------------------------------------------------------
 Console.WriteLine(".....Teste.....");
-var lista = new List<string> { "hello", "world" }.Accumulate(x => x.ToUpper());
-foreach (var item in lista)
-{
-    Console.WriteLine(item);
-}
+
+(string, int, char) tupl;
+tupl = ("mensagem", 12, 'a');
+Console.WriteLine(tupl);
+
+Console.WriteLine("123".Equals("12"));
+
+string teste = "abcde";
+Console.WriteLine(teste.StartsWith("ab2"));
