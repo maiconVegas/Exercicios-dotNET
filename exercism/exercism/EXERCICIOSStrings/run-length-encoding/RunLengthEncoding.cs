@@ -30,6 +30,29 @@ public static class RunLengthEncoding
 
     public static string Decode(string input)
     {
-        throw new NotImplementedException("You need to implement this method.");
+        if(string.IsNullOrEmpty(input)) return input;
+        StringBuilder output = new StringBuilder();
+        string count = string.Empty;
+        foreach (char c in input)
+        {
+            if (char.IsDigit(c))
+            {
+                count += c;
+            }
+            else if(!string.IsNullOrEmpty(count))
+            {
+                for (int i = 0; i < Convert.ToInt32(count); i++)
+                {
+                    output.Append(c);
+                }
+                count = "";
+            }
+            else
+            {
+                output.Append(c);
+            }
+        }
+
+        return output.ToString();
     }
 }

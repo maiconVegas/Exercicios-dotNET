@@ -364,23 +364,23 @@ using System.Xml.XPath;
 //}
 
 //-----------------------------------------------------------------------------------------------
-Console.WriteLine(".....Teste.....");
-string teste = "aaaaaaaaccccccSSds3wsRSr";
-//teste += "A";
-//teste += "B";
-//teste += "B";
-//teste += "B";
-//teste += "C";
+//Console.WriteLine(".....Teste.....");
+//string teste = "aaaaaaaaccccccSSds3wsRSr";
+////teste += "A";
+////teste += "B";
+////teste += "B";
+////teste += "B";
+////teste += "C";
 
-Console.WriteLine(teste[^1]);
-string gggg = "";
-//gggg += $"{3* 'A'}";
-for (int i = 0; i < 3; i++)
-{
-    gggg += $"{'a'}";
-}
+//Console.WriteLine(teste[^1]);
+//string gggg = "";
+////gggg += $"{3* 'A'}";
+//for (int i = 0; i < 3; i++)
+//{
+//    gggg += $"{'a'}";
+//}
 
-Console.WriteLine(gggg);
+//Console.WriteLine(gggg);
 //string resultado = string.Empty;
 //int count = 0;
 //char equaled = teste[0];
@@ -399,4 +399,14 @@ Console.WriteLine(gggg);
 //}
 //resultado += $"{(count > 1 ? count : "")}{equaled}";
 //Console.WriteLine(resultado);
-Console.WriteLine(RunLengthEncoding.Encode("ABC"));
+//Console.WriteLine(RunLengthEncoding.Encode("aaaaaaaaccccccSSds3wsRSr"));
+//Console.WriteLine(RunLengthEncoding.Decode("A5SV15T4 6y"));
+
+//----------------------------------ATE AGORA E MUITO SIMPLES ISSO MAS AO MESMO TEPO COMPLICADO-------------------------------------------------------------
+Console.WriteLine(".....Teste.....");
+
+Console.WriteLine(new String('A', 17));
+
+string teste = "F4b11R";
+string resultado = Regex.Replace(teste, @"(\d+)(\D)", m => new String(m.Groups[2].Value[0], Convert.ToInt32(m.Groups[1].Value)));
+Console.WriteLine(resultado);
