@@ -2,6 +2,7 @@
 using exercism.annalyns_infiltration;
 using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
+using exercism.EXERCICIOSExtensionMethods.log_analysis;
 using exercism.EXERCICIOSStrings.acronym;
 using exercism.EXERCICIOSStrings.bob;
 using exercism.EXERCICIOSStrings.isogram;
@@ -412,3 +413,21 @@ string teste = "F4b11R";
 //string resultado = Regex.Replace(teste, @"(\d+)(\D)", m => new String(m.Groups[2].Value[0], Convert.ToInt32(m.Groups[1].Value)));
 //Console.WriteLine(resultado);
 Console.WriteLine(String.Concat(teste.Reverse()));
+
+string log = "[INFO]: File Deleted.";
+string result = log.SubstringAfter(": ");
+Console.WriteLine(result); // Output: "File Deleted."
+
+var loge = "[ASDASDASD]: File Deleted.";
+Console.WriteLine(loge.SubstringBetween("[", "]")); // => returns "INFO"
+
+var logee = "[ERROR]: Missing ; on line 20.";
+Console.WriteLine(logee.Message()); // => returns "Missing ; on line 20."
+
+var logi = "[ERROR]: Missing ; on line 20.";
+Console.WriteLine(logi.LogLevel()); // => returns "ERROR"
+var testy = logi.Split();
+foreach (var item in testy)
+{
+    Console.WriteLine(item);
+}
