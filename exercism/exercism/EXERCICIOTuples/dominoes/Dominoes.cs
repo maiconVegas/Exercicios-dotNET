@@ -39,4 +39,19 @@ public static class Dominoes
         }
         return primeiroA == ladoB && decrescente.Count == 0;
     }
+
+    /*
+    EXPLICAÇÃO DO RACICIONIO DO MESTRE MAICON QI 100000:
+
+    1 - Ordernar a coleção das tuplas de suas somas dos valores, no caso o x.Item1 + x.Item2 e o seu resultado
+    deve ser ordenado de menor para o maior
+    2 - pegar o primeiro valor da ordem que foi ordenada de menor para o maior
+    3 - depois disso, remover o primeiro valor da coleção ordenada
+    4 - depois disso ordenar a coleção de Maior para menor
+    5 - depois disso, o primeiro valor como base do inicio, o lado b dele, no caso o item2
+    compare o valor que seja igual ao da coleção, onde que a coleção esta ordenada de maior para o menor
+    E com isso, caso encontre o valor, faça com que elimine o valor que foi encontrado da coleção e
+    ele vai tornar um valor referencia para percorrer nas coleções
+
+     */
 }

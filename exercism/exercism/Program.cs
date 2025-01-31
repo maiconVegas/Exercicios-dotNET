@@ -455,7 +455,7 @@ using System.Xml.XPath;
 //Console.WriteLine(teste.StartsWith("ab2"));
 
 //-----------------------------------------------------------------------------------------------
-Console.WriteLine(".....Teste.....");
+/*Console.WriteLine(".....Teste.....");
 
 IEnumerable<string> teste = Enumerable.Empty<string>();
 
@@ -571,3 +571,6 @@ Console.WriteLine(primeiroA==ladoB && decrescente.Count == 0);
 //Console.WriteLine(decrescente.Any(x => x.Item1 == ladoB));
 decrescente.ForEach(nome => Console.WriteLine(nome));
 
+*/
+//-----------------------------------------------------------------------------------------------
+Console.WriteLine(".....Teste.....");
