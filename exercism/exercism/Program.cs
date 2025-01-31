@@ -17,6 +17,7 @@ using exercism.lucians_luscious_lasagna;
 using exercism.squeaky_clean;
 using exercism.tracks_on_tracks_on_tracks;
 using exercism.wizards_and_warriors;
+using Microsoft.VisualBasic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Runtime.InteropServices.Marshalling;
@@ -462,8 +463,111 @@ teste = teste.Append("aaa");
 teste = teste.Append("bbbb");
 teste.ToList().ForEach(nome => Console.WriteLine(nome));
 
-var test2 = new List<(string, int)>();
+//var test2 = new List<(int, int)>() { (1, 2), (5, 3), (3, 1), (1, 2), (2, 4), (1, 6), (2, 3), (3, 4), (5, 6) };
+//var test2 = new List<(int, int)>() { (1, 2), (2, 3), (3, 1), (2, 4), (2, 4) };
+var test2 = new List<(int, int)>() { (1, 2), (2, 3), (3, 1), (4, 4) };
 
-test2.Add(("a1aa", 1));
-test2.Add(("bb1bb", 1));
-test2.ForEach(nome => Console.WriteLine(nome));
+
+//test2.Add((1, 2));
+//test2.Add((3, 1));
+//test2.Add((2, 3));
+var mimi = test2.OrderBy(x => x.Item1 + x.Item2);
+Console.WriteLine(mimi.First());
+Console.WriteLine("\n\n\n");
+mimi.ToList().ForEach(nome => Console.WriteLine(nome));
+Console.WriteLine("\n\n");
+Console.WriteLine(mimi.Count());
+
+Console.WriteLine("TESTEEEEEEEEEEEEEEEEEEEEEEEEE");
+var primeiro = test2.OrderBy(x => x.Item1 + x.Item2).First();
+test2.Remove(primeiro);
+//test2.ToList().ForEach(nome => Console.WriteLine(nome));
+//Console.WriteLine("TESTEEEEEEEEEEEEEEEEEEEEEEEEE");
+
+var decrescente = test2.OrderByDescending(x => x.Item1 + x.Item2).ToList();
+//Console.WriteLine(primeiro);
+//decrescente.ForEach(nome => Console.WriteLine(nome));
+//Console.WriteLine($"{primeiro.Item1} {primeiro.Item2}");
+var primeiroA = primeiro.Item1;
+var ladoB = primeiro.Item2;
+int ladoA;
+//foreach (var item in decrescente)
+//{
+//    //if (ladoB.Equals(item.Item1))
+//    //{
+//    //    ladoA = item.Item1;
+//    //    ladoB = item.Item2;
+//    //    //decrescente.Remove(item);
+//    //}
+//    //else if (ladoB.Equals(item.Item2))
+//    //{
+//    //    ladoA = item.Item2;
+//    //    ladoB = item.Item1;
+//    //    //decrescente.Remove(item);
+//    //}
+//    //else
+//    //{
+//    //    Console.WriteLine("NAO FAZ CORRENTE");
+//    //}
+//    if (decrescente.Any(x => item.Item1 == ladoB))
+//    {
+//        ladoA = item.Item1;
+//        ladoB = item.Item2;
+//        //decrescente.Remove(item);
+//    }
+//    else if (decrescente.Any(x => item.Item2 == ladoB))
+//    {
+//        ladoA = item.Item2;
+//        ladoB = item.Item1;
+//        //decrescente.Remove(item);
+//    }
+//    else
+//    {
+//        Console.WriteLine("NAO FAZ CORRENTE");
+//    }
+//}
+//Console.WriteLine("FAZ CORRENTE");
+int count = decrescente.Count();
+while (count > 0)
+{
+    foreach (var item in decrescente)
+    {
+        if (ladoB.Equals(item.Item1))
+        {
+            ladoA = item.Item1;
+            ladoB = item.Item2;
+            decrescente.Remove(item);
+            break;
+            //decrescente.Remove(item);
+        }
+        else if (ladoB.Equals(item.Item2))
+        {
+            ladoA = item.Item2;
+            ladoB = item.Item1;
+            decrescente.Remove(item);
+            break;
+            //decrescente.Remove(item);
+        }
+    }
+    count--;
+}
+Console.WriteLine(primeiroA==ladoB && decrescente.Count == 0);
+//int count = decrescente.Count();
+//for (int i = 0; i < count; i++)
+//{
+//    if (ladoB.Equals(decrescente[i].Item1))
+//    {
+//        ladoA = decrescente[i].Item1;
+//        ladoB = decrescente[i].Item2;
+//        //decrescente.Remove(decrescente[i]);
+//    }
+//    else if (ladoB.Equals(decrescente[i].Item2))
+//    {
+//        ladoA = decrescente[i].Item2;
+//        ladoB = decrescente[i].Item1;
+//        //decrescente.Remove(decrescente[i]);
+//    }
+//}
+//Console.WriteLine(decrescente.Any(x => x.Item1 == ladoB));
+decrescente.ForEach(nome => Console.WriteLine(nome));
+
