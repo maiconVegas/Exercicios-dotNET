@@ -441,14 +441,29 @@ using System.Xml.XPath;
 //    Console.WriteLine(item);
 //}
 
+////-----------------------------------------------------------------------------------------------
+//Console.WriteLine(".....Teste.....");
+
+//(string, int, char) tupl;
+//tupl = ("mensagem", 12, 'a');
+//Console.WriteLine(tupl);
+
+//Console.WriteLine("123".Equals("12"));
+
+//string teste = "abcde";
+//Console.WriteLine(teste.StartsWith("ab2"));
+
 //-----------------------------------------------------------------------------------------------
 Console.WriteLine(".....Teste.....");
 
-(string, int, char) tupl;
-tupl = ("mensagem", 12, 'a');
-Console.WriteLine(tupl);
+IEnumerable<string> teste = Enumerable.Empty<string>();
 
-Console.WriteLine("123".Equals("12"));
+teste = teste.Append("aaa");
+teste = teste.Append("bbbb");
+teste.ToList().ForEach(nome => Console.WriteLine(nome));
 
-string teste = "abcde";
-Console.WriteLine(teste.StartsWith("ab2"));
+var test2 = new List<(string, int)>();
+
+test2.Add(("a1aa", 1));
+test2.Add(("bb1bb", 1));
+test2.ForEach(nome => Console.WriteLine(nome));
