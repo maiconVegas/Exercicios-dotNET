@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercism.IfStatements
+namespace exercism.EXERCICIOSIfStatements
 {
     public class AssemblyLine
     {
