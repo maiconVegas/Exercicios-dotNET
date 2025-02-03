@@ -11,6 +11,7 @@ using exercism.EXERCICIOSStrings.isogram;
 using exercism.EXERCICIOSStrings.pangram;
 using exercism.EXERCICIOSStrings.rotational_cipher;
 using exercism.EXERCICIOSStrings.run_length_encoding;
+using exercism.EXERCICIOTuples.saddle_points;
 using exercism.hello_world;
 using exercism.interest_is_interesting;
 using exercism.international_calling_connoisseur;
@@ -574,27 +575,54 @@ decrescente.ForEach(nome => Console.WriteLine(nome));
 
 */
 //-----------------------------------------------------------------------------------------------
-Console.WriteLine(".....Teste.....");
+//Console.WriteLine(".....Teste.....");
 
-int[,] matrix = new int[3, 5];
-matrix[0, 0] = 0;
-matrix[0, 1] = 1;
-matrix[0, 2] = 2;
-matrix[1, 0] = 3;
-matrix[1, 1] = 4;
-matrix[1, 2] = 5;
-matrix[2, 0] = 6;
-matrix[2, 1] = 7;
-matrix[2, 2] = 8;
-foreach (var item in Enumerable.Range(0, matrix.GetLength(0)))
-{
-    Console.WriteLine(item);
-}
-Console.WriteLine();
-Console.WriteLine(matrix[2,1]);
+//int[,] matrix = new int[3, 4];
+//matrix[0, 0] = 9;
+//matrix[0, 1] = 8;
+//matrix[0, 2] = 7;
+//matrix[0, 3] = 8;
+
+//matrix[1, 0] = 5;
+//matrix[1, 1] = 3;
+//matrix[1, 2] = 2;
+//matrix[1, 3] = 4;
+
+//matrix[2, 0] = 6;
+//matrix[2, 1] = 6;
+//matrix[2, 2] = 7;
+//matrix[2, 3] = 1;
+//foreach (var item in Enumerable.Range(0, matrix.GetLength(1)))
+//{
+//    Console.WriteLine(item);
+//}
+
+//var colecao = SaddlePoints.Calculate(matrix);
+//foreach (var item in colecao)
+//{
+//    Console.WriteLine(item);
+//}
+//Console.WriteLine(matrix.GetLength(0));
+//Console.WriteLine(matrix.GetLength(1));
+
+//Console.WriteLine("/////");
+//var qualquer = Enumerable.Range(0, matrix.GetLength(1)).Select(c => matrix[0, c]);
+//foreach (var item in qualquer)
+//{
+//    Console.WriteLine(item);
+//}
+//Console.WriteLine("/////");
+
+//Console.WriteLine(qualquer);
+//Console.WriteLine(matrix[2,1]);
+
+//Console.WriteLine();
+
+
 
 
 //-----------------------------------------------------------------------------------------------
 Console.WriteLine(".....Teste.....");
 
-Console.WriteLine(2.ToRoman());
+//Console.WriteLine(2.ToRoman());
+
