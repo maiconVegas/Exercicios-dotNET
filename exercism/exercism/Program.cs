@@ -4,6 +4,7 @@ using exercism.booking_up_for_beauty;
 using exercism.elons_toys;
 using exercism.EXERCICIOSExtensionMethods.accumulate;
 using exercism.EXERCICIOSExtensionMethods.log_analysis;
+using exercism.EXERCICIOSExtensionMethods.roman_numerals;
 using exercism.EXERCICIOSStrings.acronym;
 using exercism.EXERCICIOSStrings.bob;
 using exercism.EXERCICIOSStrings.isogram;
@@ -574,3 +575,26 @@ decrescente.ForEach(nome => Console.WriteLine(nome));
 */
 //-----------------------------------------------------------------------------------------------
 Console.WriteLine(".....Teste.....");
+
+int[,] matrix = new int[3, 5];
+matrix[0, 0] = 0;
+matrix[0, 1] = 1;
+matrix[0, 2] = 2;
+matrix[1, 0] = 3;
+matrix[1, 1] = 4;
+matrix[1, 2] = 5;
+matrix[2, 0] = 6;
+matrix[2, 1] = 7;
+matrix[2, 2] = 8;
+foreach (var item in Enumerable.Range(0, matrix.GetLength(0)))
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine();
+Console.WriteLine(matrix[2,1]);
+
+
+//-----------------------------------------------------------------------------------------------
+Console.WriteLine(".....Teste.....");
+
+Console.WriteLine(2.ToRoman());
